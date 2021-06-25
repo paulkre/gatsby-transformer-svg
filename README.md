@@ -22,10 +22,13 @@ module.exports = {
 
 ```graphql
 file {
-    childInlineSvg {
-        content
+  childSvg {
+    content {
+      data
+      width
+      height
     }
-    url
+  }
 }
 ```
 
@@ -35,16 +38,10 @@ file {
 import React from "react";
 
 export default function Image({ file }) {
-  // inlined SVG
-  if (file?.childInlineSvg?.content) {
+  if (file?.childSvg?.content) {
     return (
-      <div
-        dangerouslySetInnerHTML={{ __html: file?.childInlineSvg?.content }}
-      />
+      <div dangerouslySetInnerHTML={{ __html: file?.childSvg?.content.data }} />
     );
   }
-
-  // other images
-  return <img src={file.url} alt={alt} />;
 }
 ```

@@ -20,5 +20,13 @@
   "homepage": "https://github.com/paulkre/gatsby-transformer-svg#readme",
   "peerDependencies": {
     "gatsby": "^3"
-  }
+  },
+  "dependencies": {
+    "svgo": "^2.3.0"
+  },
+  "files": [
+    "LICENSE",
+    "index.js",
+    "gatsby-node.js"
+  ]
 }
