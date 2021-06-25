@@ -1,0 +1,24 @@
+{
+  "name": "@paulkre/gatsby-transformer-svg",
+  "description": "Inline and optimize SVG's from your GraphQL data source",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Paul Kretschel <paul.kretschel@icloud.com>",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-transformer-plugin",
+    "svg",
+    "svgo",
+    "inline-svg",
+    "optimization"
+  ],
+  "bugs": {
+    "url": "https://github.com/paulkre/gatsby-transformer-svg/issues"
+  },
+  "homepage": "https://github.com/paulkre/gatsby-transformer-svg#readme",
+  "peerDependencies": {
+    "gatsby": "^3"
+  }
+}
