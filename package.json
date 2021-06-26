@@ -28,5 +28,8 @@
     "LICENSE",
     "index.js",
     "gatsby-node.js"
-  ]
+  ],
+  "devDependencies": {
+    "@changesets/cli": "^2.16.0"
+  }
 }
