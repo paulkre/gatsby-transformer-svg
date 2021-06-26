@@ -23,7 +23,7 @@ const svgoOptions = {
     "removeUnknownsAndDefaults",
     "removeNonInheritableGroupAttrs",
     "removeUselessStrokeAndFill",
-    "removeViewBox",
+    // "removeViewBox",
     "cleanupEnableBackground",
     "removeHiddenElems",
     "removeEmptyText",
@@ -60,7 +60,7 @@ exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
   }`);
 };
 
-exports.onCreateNode = function ({ node, actions, createNodeId }) {
+exports.onCreateNode = function({ node, actions, createNodeId }) {
   const { createNode, createParentChildLink } = actions;
   if (node.extension !== "svg") return;
 
