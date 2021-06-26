@@ -1,7 +1,7 @@
 {
   "name": "@paulkre/gatsby-transformer-svg",
   "description": "Inline and optimize SVG's from your GraphQL data source",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "license": "MIT",
   "author": "Paul Kretschel <paul.kretschel@icloud.com>",
