@@ -18,6 +18,27 @@ module.exports = {
 };
 ```
 
+Optionally, you can also override the [SVGO options](https://github.com/svg/svgo#configuration) which are being used internally to optimize the `.svg` files:
+
+```js
+module.exports = {
+  plugins: [
+    {
+      resolve: "@paulkre/gatsby-transformer-svg",
+      options: {
+        svgo: {
+          multipass: true,
+          floatPrecision: 2,
+          plugins: [
+            // ...
+          ],
+        },
+      },
+    },
+  ],
+};
+```
+
 ### GraphQL Query
 
 ```graphql

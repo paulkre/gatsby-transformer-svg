@@ -78,16 +78,16 @@ exports.onCreateNode = function({ node, actions, createNodeId }) {
   createParentChildLink({ parent: node, child: svgNode });
 };
 
-exports.createResolvers = ({
-  createResolvers,
-  getNodeAndSavePathDependency,
-}) => {
+exports.createResolvers = (
+  { createResolvers, getNodeAndSavePathDependency },
+  pluginOptions
+) => {
   createResolvers({
     Svg: {
       content: {
-        async resolve(image, _fieldArgs, context) {
+        async resolve(node, _fieldArgs, context) {
           const { absolutePath } = getNodeAndSavePathDependency(
-            image.parent,
+            node.parent,
             context.path
           );
           const svg = await fs.readFile(absolutePath);
@@ -99,8 +99,8 @@ exports.createResolvers = ({
               data,
               info: { width, height },
             } = optimizeSVG(svg, {
+              ...(pluginOptions.svgo || svgoOptions),
               path: absolutePath,
-              ...svgoOptions,
             });
 
             return { data, width, height };
